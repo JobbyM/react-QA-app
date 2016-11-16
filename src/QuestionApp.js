@@ -39,6 +39,14 @@ class QuestionApp extends Component {
     })
   }
 
+  onNewQuestion(newQuestion){
+    newQuestion.id = this.state.questions.length + 1;
+    let newQuestions = this.state.questions.concat(newQuestion)
+    this.setState({
+      questions: newQuestions
+    })
+  }
+
   render() {
     return (
       <div>
@@ -51,7 +59,8 @@ class QuestionApp extends Component {
         <div className="container media-list">
           <QuestionForm
             formDisplay={this.state.formDisplay}
-            onToggleForm={()=>this.onToggleForm()}/>
+            onToggleForm={()=>this.onToggleForm()}
+            onNewQuestion={(e)=>this.onNewQuestion(e)}/>
           <QuestionList
             questions={this.state.questions}/>
         </div>
