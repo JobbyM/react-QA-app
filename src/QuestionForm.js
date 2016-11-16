@@ -3,8 +3,11 @@ import './QuestionForm.css';
 
 class QuestionForm extends Component {
   render() {
+    let styleObj = {
+      display: this.props.formDisplay ? 'block' : 'none'
+    }
     return (
-      <form action="" className="clearfix" name="addQuestion">
+      <form action="" className="clearfix" name="addQuestion" style={styleObj}>
         <div className="form-group">
           <label htmlFor="qtitle">问题</label>
           <input type="text" className="form-control" id="qtitle" placeholder="您的问题标题" />
@@ -14,7 +17,7 @@ class QuestionForm extends Component {
           <textarea name="qdesc" id="qdesc" rows="3" className="form-control" placeholder="问题的描述"></textarea>
         </div>
         <button className="btn btn-success pull-right">确认</button>
-        <button className="btn btn-default pull-right">取消</button>
+        <button className="btn btn-default pull-right" onClick={()=>this.props.onToggleForm}>取消</button>
       </form>
     )
   }
