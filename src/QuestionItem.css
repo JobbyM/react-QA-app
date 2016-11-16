@@ -1,3 +1,10 @@
+.media-left{
+  text-align: center;
+  width:70px;
+}
+.media-left .btn{
+  margin-bottom: 10px;
+}
 .vote-count {
   display: block;
 }
