@@ -47,6 +47,19 @@ class QuestionApp extends Component {
     })
   }
 
+  onVote(key, newCount){
+      let newQuestion = this.state.questions.map(function(v, k, q){
+        if(v.id === key){
+          v.voteCount = newCount;
+        }
+        return v;
+      })
+
+      this.setState({
+        questions: newQuestion
+      })
+  }
+
   render() {
     return (
       <div>
@@ -62,7 +75,8 @@ class QuestionApp extends Component {
             onToggleForm={()=>this.onToggleForm()}
             onNewQuestion={(e)=>this.onNewQuestion(e)}/>
           <QuestionList
-            questions={this.state.questions}/>
+            questions={this.state.questions}
+            onVote={(key, newCount)=>this.onVote(key, newCount)}/>
         </div>
       </div>
     )
