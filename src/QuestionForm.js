@@ -32,7 +32,7 @@ class QuestionForm extends Component {
           <textarea ref="desc" name="qdesc" id="qdesc" rows="3" className="form-control" placeholder="问题的描述"></textarea>
         </div>
         <button className="btn btn-success pull-right">确认</button>
-        <button className="btn btn-default pull-right" onClick={()=>this.props.onToggleForm}>取消</button>
+        <button className="btn btn-default pull-right" onClick={()=>this.props.onToggleForm()}>取消</button>
       </form>
     )
   }
