@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ShowAddButton from './ShowAddButton';
-import QuestionForm from './QuestionForm';
+import ShowAddButton from '../components/ShowAddButton';
+import QuestionForm from '../components/QuestionForm';
 import QuestionList from './QuestionList';
 
 class QuestionApp extends Component {

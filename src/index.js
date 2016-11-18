@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import QuestionApp from './QuestionApp'
+import QuestionApp from './containers/QuestionApp'
 
 ReactDOM.render(
   <QuestionApp />,

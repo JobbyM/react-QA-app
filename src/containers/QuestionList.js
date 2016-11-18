@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import QuestionItem from './QuestionItem';
+import QuestionItem from '../components/QuestionItem';
 
 class QuestionList extends Component {
   render() {

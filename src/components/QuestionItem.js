@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './QuestionItem.css'
+import '../styles/QuestionItem.css'
 
 class QuestionItem extends Component {
   voteUp(){

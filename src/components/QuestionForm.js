@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './QuestionForm.css';
+import '../styles/QuestionForm.css';
 
 class QuestionForm extends Component {
   submitHandle(e) {
